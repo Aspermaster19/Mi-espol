@@ -158,3 +158,14 @@ document.addEventListener("click", (e) => {
     qrImage.classList.add("hidden");
   }
 });
+
+// --- NUEVO: Botón de retroceso para volver al calendario ---
+const backBtn = document.querySelector(".topbar .icon-btn");
+backBtn.addEventListener("click", () => {
+  // Solo hacer el cambio si estamos en la vista del gimnasio
+  const gymView = document.getElementById("gymView");
+  if (gymView && gymView.style.display === "block") {
+    gymView.style.display = "none";
+    document.getElementById("calendarView").style.display = "block";
+  }
+});
