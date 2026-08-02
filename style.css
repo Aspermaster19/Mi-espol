@@ -159,10 +159,10 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%); /* Centra la imagen matemáticamente */
-  width: 250px; /* Tamaño del QR, ajústalo según necesites */
-  height: 250px;
+  width: 200px; /* Tamaño del QR, ajústalo según necesites */
+  height: 200px;
   z-index: 100; /* Asegura que esté por encima de todo */
-  border-radius: 12px;
+  border-radius: 0px;
   box-shadow: 0 10px 25px rgba(0,0,0,0.6); /* Sombra para que resalte sobre el fondo */
   pointer-events: auto; /* Permite detectar clics en la imagen */
 }
