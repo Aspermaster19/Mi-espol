@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, maximum-scale=1, user-scalable=no">
+<title>Mi Espol · Paso 1: Calendario</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="app">
+
+  <div class="topbar">
+    <button class="icon-btn" aria-label="Atrás">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M15 18l-6-6 6-6"/></svg>
+    </button>
+    <div class="logo"><span class="mi">mi</span><span class="espol">espol<sup>&reg;</sup></span></div>
+    <div class="topbar-right">
+      <button class="icon-btn" aria-label="Cámara">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="2.6"/><path d="M12 3v3M12 18v3M21 12h-3M6 12H3M18.4 5.6l-2 2M7.6 16.4l-2 2M18.4 18.4l-2-2M7.6 7.6l-2-2"/></svg>
+      </button>
+      <button class="icon-btn" aria-label="Notificaciones" style="color:#6f9bff;">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M18 8a6 6 0 10-12 0c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.7 21a2 2 0 01-3.4 0"/></svg>
+      </button>
+    </div>
+  </div>
+
+  <div class="scroll" id="scrollArea">
+    <div class="cal-nav">
+      <button class="arrow" id="prevMonth"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg></button>
+      <div class="month" id="monthLabel">Julio</div>
+      <div class="cal-toggle">
+        <button class="pill-btn active" id="allBtn">Todos</button>
+        <button class="pill-btn" id="dayNumBtn">27</button>
+      </div>
+      <button class="arrow" id="nextMonth"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg></button>
+    </div>
+
+    <div class="weekdays">
+      <div>Dom</div><div>Lun</div><div>Mar</div><div>Mié</div><div>Jue</div><div>Vie</div><div>Sáb</div>
+    </div>
+    <div class="grid" id="calGrid"></div>
+
+    <div class="day-panel">
+      <div class="day-label"><span id="selDow">LUN</span><span class="num-badge" id="selNum">27</span></div>
+      <div class="agenda" id="agenda"></div>
+    </div>
+  </div>
+
+  <div class="bottom-nav">
+    <button class="nav-btn active" aria-label="Inicio">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/></svg>
+    </button>
+    <button class="nav-btn" id="navAlert" aria-label="Alertas">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 8l6 3 3-5 3 5 6-3-2 10H5L3 8z"/></svg>
+    </button>
+    <button class="nav-btn" id="navQr" aria-label="Código QR">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><path d="M14 14h3v3h-3zM20 14v3M14 20h3M20 20v.01"/></svg>
+    </button>
+    <button class="nav-btn" id="navFinger" aria-label="Huella">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M12 4a8 8 0 018 8c0 2.5-.5 4-1 5"/><path d="M12 4a8 8 0 00-8 8c0 1.5.2 2.5.5 3.5"/><path d="M12 8a4 4 0 014 4c0 3-1 5-2 6.5"/><path d="M12 8a4 4 0 00-4 4c0 2 .3 3.3.8 4.3"/><path d="M12 12v3c0 2-.5 3.5-1.5 5"/></svg>
+    </button>
+    <button class="nav-btn" id="navProfile" aria-label="Perfil">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="8" r="4"/><path d="M4 21c1.5-4 5-6 8-6s6.5 2 8 6"/></svg>
+    </button>
+  </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
