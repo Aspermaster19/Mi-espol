@@ -217,11 +217,13 @@
 }
 .detail-label {
   width: 85px;
-  /* Degradado de oscuro arriba a plateado claro abajo */
   background: linear-gradient(180deg, #283a60 0%, #314b7a 60%, #a4badd 100%);
-  flex-direction: column;
+  
+  display: flex;
+  flex-direction: column; /* <--- ESTA ES LA LÍNEA QUE LO ARREGLA */
   align-items: center;
   justify-content: center;
+  
   gap: 4px;
   color: #fff;
   flex-shrink: 0;
