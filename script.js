@@ -104,6 +104,11 @@ const MESES = ["Enero","Febrero","Marzo","Abril","Mayo","Junio","Julio","Agosto"
       <div class="gicon"><svg viewBox="0 0 24 24" fill="none" stroke="var(--orange)" stroke-width="2"><path d="M6 8v8M4 10v4M20 10v4M18 8v8M8 12h8"/></svg></div>
     `;
     agenda.appendChild(gymCard);
+    // --- NUEVO: Conectar la tarjeta del gym con la vista detalle ---
+    gymCard.addEventListener("click", () => {
+      document.getElementById("calendarView").style.display = "none";
+      document.getElementById("gymView").style.display = "block";
+    });
 
     const classes = [
       {cls:"dark", name:"CCPG1051 - PROGRAMACIÓN DE SISTEMAS", time:"13:00 - 14:00", room:"P-3"},
