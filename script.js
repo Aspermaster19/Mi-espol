@@ -135,3 +135,21 @@ const MESES = ["Enero","Febrero","Marzo","Abril","Mayo","Junio","Julio","Agosto"
 
   buildCalendar();
   buildAgenda();
+
+// ---------- Lógica de la Imagen QR Flotante ----------
+const qrBtn = document.getElementById("navQr");
+const qrImage = document.getElementById("qrFloatingImage");
+
+// Mostrar la imagen al tocar el botón de la barra inferior
+qrBtn.addEventListener("click", (e) => {
+  e.stopPropagation(); // Evita que el clic se propague y cierre el QR inmediatamente
+  qrImage.classList.remove("hidden");
+});
+
+// Ocultar la imagen al tocar cualquier parte de la pantalla
+document.addEventListener("click", (e) => {
+  // Si el clic NO fue en la imagen del QR y la imagen NO está oculta
+  if (e.target !== qrImage && !qrImage.classList.contains("hidden")) {
+    qrImage.classList.add("hidden");
+  }
+});
