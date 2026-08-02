@@ -25,25 +25,92 @@
   </div>
 
   <div class="scroll" id="scrollArea">
-    <div class="cal-nav">
-      <button class="arrow" id="prevMonth"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg></button>
-      <div class="month" id="monthLabel">Julio</div>
-      <div class="cal-toggle">
-        <button class="pill-btn active" id="allBtn">Todos</button>
-        <button class="pill-btn" id="dayNumBtn">27</button>
+    
+    <!-- VISTA 1: CALENDARIO -->
+    <div id="calendarView">
+      <div class="cal-nav">
+        <button class="arrow" id="prevMonth"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg></button>
+        <div class="month" id="monthLabel">Julio</div>
+        <div class="cal-toggle">
+          <button class="pill-btn active" id="allBtn">Todos</button>
+          <button class="pill-btn" id="dayNumBtn">27</button>
+        </div>
+        <button class="arrow" id="nextMonth"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg></button>
       </div>
-      <button class="arrow" id="nextMonth"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg></button>
+
+      <div class="weekdays">
+        <div>Dom</div><div>Lun</div><div>Mar</div><div>Mié</div><div>Jue</div><div>Vie</div><div>Sáb</div>
+      </div>
+      <div class="grid" id="calGrid"></div>
+
+      <div class="day-panel">
+        <div class="day-label"><span id="selDow">LUN</span><span class="num-badge" id="selNum">27</span></div>
+        <div class="agenda" id="agenda"></div>
+      </div>
     </div>
 
-    <div class="weekdays">
-      <div>Dom</div><div>Lun</div><div>Mar</div><div>Mié</div><div>Jue</div><div>Vie</div><div>Sáb</div>
-    </div>
-    <div class="grid" id="calGrid"></div>
+    <!-- VISTA 2: DETALLE DEL GIMNASIO -->
+    <div id="gymView" style="display: none;">
+      <div class="gym-header-title">
+        <div class="gicon-large">
+          <svg viewBox="0 0 24 24" fill="none" stroke="var(--orange)" stroke-width="2"><path d="M6 8v8M4 10v4M20 10v4M18 8v8M8 12h8"/></svg>
+        </div>
+        <h2>Gimnasio</h2>
+      </div>
 
-    <div class="day-panel">
-      <div class="day-label"><span id="selDow">LUN</span><span class="num-badge" id="selNum">27</span></div>
-      <div class="agenda" id="agenda"></div>
+      <div class="gym-detail-panel">
+        <div class="detail-row">
+          <div class="detail-label">
+            <span>Fecha</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+          </div>
+          <div class="detail-value">Lunes, 27 de julio de 2026</div>
+        </div>
+
+        <div class="detail-row">
+          <div class="detail-label">
+            <span>Horario</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+          </div>
+          <div class="detail-value">12:00 - 13:00</div>
+        </div>
+
+        <div class="detail-row">
+          <div class="detail-label">
+            <span>Contacto</span>
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>
+          </div>
+          <div class="detail-value">Geovanny Patricio Vargasvila Granda</div>
+        </div>
+
+        <div class="detail-row">
+          <div class="detail-label">
+            <span>Ubicación</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+          </div>
+          <div class="detail-value">Campus Gustavo Galindo. Edificio 4E. Oficina G001</div>
+        </div>
+
+        <div class="detail-row">
+          <div class="detail-label">
+            <span>WhatsApp</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+          </div>
+          <div class="detail-value">Abrir WhatsApp</div>
+        </div>
+
+        <div class="detail-row">
+          <div class="detail-label">
+            <span>Políticas</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>
+          </div>
+          <div class="detail-value">Ver las políticas</div>
+        </div>
+
+        <button class="cancel-btn">Cancelar reservación</button>
+      </div>
     </div>
+
   </div>
 
   <div class="bottom-nav">
