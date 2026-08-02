@@ -95,7 +95,7 @@
   .d-orange{background:var(--orange);}
   .d-purple{background:var(--purple);}
 
-  .day-panel{padding:14px 14px 50px 14px; background:#2d2d2f; border-radius:24px 24px 0 0;}
+  .day-panel{padding:14px 14px 70px 14px; background:#2d2d2f; border-radius:24px 24px 0 0;}
   .day-panel .day-label{
     display:flex; flex-direction:column; align-items:center; float:left;
     width:56px; margin-right:12px; margin-top:2px; color:var(--blue-accent);
