@@ -138,7 +138,7 @@
   /* ---------- Bottom nav ---------- */
   .bottom-nav{
     position:absolute; left:14px; right:14px; bottom:calc(14px + env(safe-area-inset-bottom));
-    background:#000; border:1.5px solid #333; border-radius:34px;
+    background:#000; border:1.5px solid #ffffff; border-radius:34px;
     display:flex; align-items:center; justify-content:space-around;
     padding:8px 10px; z-index:30;
   }
