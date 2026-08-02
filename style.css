@@ -36,7 +36,7 @@
   .logo{
     display:flex; flex-direction:column; align-items:center; line-height:0.78;
     font-weight:300; letter-spacing:0.5px; user-select:none;
-    transform:translateX(-150px);
+    transform:translateX(-100px);
 }
   .logo .mi{font-size:15px; font-weight:300;}
   .logo .espol{font-size:26px; font-weight:600; display:flex; align-items:flex-start;}
