@@ -199,13 +199,14 @@
   height: 24px;
 }
 .gym-detail-panel {
-  background: #202022;
+  background: #2d2d2f; /* <--- Cambiado al color gris exacto que pediste */
   border-radius: 24px;
-  margin: 0 14px 100px 14px;
-  padding: 8px 8px 20px 8px;
+  margin: 0 14px 0 14px; /* <--- Quitamos el margen transparente de abajo */
+  padding: 8px 8px 120px 8px; /* <--- Añadimos relleno para que el color gris baje hasta el final */
   display: flex;
   flex-direction: column;
   gap: 8px;
+  min-height: 80vh; /* <--- Forzamos a que el cuadro sea lo suficientemente alto para cubrir la barra inferior */
 }
 .detail-row {
   display: flex;
