@@ -6,6 +6,7 @@ const MESES = ["Enero","Febrero","Marzo","Abril","Mayo","Junio","Julio","Agosto"
   let viewYear = today.getFullYear();
   let viewMonth = today.getMonth();
   let selectedDate = new Date(today);
+  let currentGymTime = "12:00 - 13:00"; // <--- AÑADE ESTA EN LA LÍNEA 9
 
   function dotsForWeekday(dow){
     if(dow === 0 || dow === 6) return [];
@@ -99,7 +100,7 @@ const MESES = ["Enero","Febrero","Marzo","Abril","Mayo","Junio","Julio","Agosto"
       <div>
         <div class="title">Gimnasio</div>
         <div class="loc">Campus Gustavo Galindo, 4E,<br>G001</div>
-        <div class="time">12:00 - 13:00</div>
+        <div class="time">${currentGymTime}</div>
       </div>
       <div class="gicon"><svg viewBox="0 0 24 24" fill="none" stroke="var(--orange)" stroke-width="2"><path d="M6 8v8M4 10v4M20 10v4M18 8v8M8 12h8"/></svg></div>
     `;
@@ -167,5 +168,23 @@ backBtn.addEventListener("click", () => {
   if (gymView && gymView.style.display === "block") {
     gymView.style.display = "none";
     document.getElementById("calendarView").style.display = "block";
+  }
+});
+
+// --- NUEVO: Cambiar horario con botón de cancelar ---
+const cancelBtn = document.getElementById("cancelBtn");
+const gymDetailTime = document.getElementById("gymDetailTime");
+
+cancelBtn.addEventListener("click", () => {
+  const nuevoHorario = prompt("Escribe el nuevo horario (ej. 14:00 - 15:00):", currentGymTime);
+  
+  if (nuevoHorario !== null && nuevoHorario.trim() !== "") {
+    currentGymTime = nuevoHorario; 
+    
+    if (gymDetailTime) {
+      gymDetailTime.textContent = currentGymTime;
+    }
+    
+    buildAgenda();
   }
 });
