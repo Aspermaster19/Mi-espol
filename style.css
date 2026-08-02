@@ -34,7 +34,7 @@
   }
   .icon-btn svg{width:24px; height:24px;}
   
-  /* --- Logo / Foto de perfil --- */
+  /* --- Logo de Mi Espol --- */
   .logo{
     display: flex;
     align-items: center;
@@ -46,10 +46,10 @@
   }
   
   .profile-pic {
-    width: 40px;
-    height: 40px;
-    border-radius: 10px; /* <--- Esto le da esquinas redondeadas modernas en lugar de un círculo o rectángulos duros */
-    object-fit: cover;  /* Evita que la foto se deforme */
+    height: 32px;       /* Altura fija para que encaje perfecto en la barra */
+    width: auto;        /* El ancho se ajusta solo para no deformar las letras */
+    border-radius: 0;   /* CERO bordes redondeados, queda rectangular original */
+    object-fit: contain;
   }
   
   .topbar-right{display:flex; gap:4px;}
